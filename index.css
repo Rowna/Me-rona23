@@ -110,6 +110,8 @@ ab 1024px für mobile navbar hamburger
   width: 50vw;
   height: 5px;
   margin-top: 1rem;
+  max-width: 450px;
+  min-width: 200px;
 }
 .landing-page__CTA-btn {
   width: 220px !important;
@@ -121,6 +123,7 @@ ab 1024px für mobile navbar hamburger
   border-color: rgb(218, 167, 167) !important;
 }
 
+/* .......................... */
 /* .......................... */
 .projects__section {
   display: grid;
@@ -135,7 +138,13 @@ ab 1024px für mobile navbar hamburger
   /* justify-content: center; */
   /* align-content: center; */
   flex-direction: column;
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 4rem 3rem;
+  /* padding-bottom: 2rem; */
+}
+.about {
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 .projects__item-img {
   z-index: 2;
@@ -166,7 +175,7 @@ ab 1024px für mobile navbar hamburger
 } /* hier brauche ich @media für mobile-version */
 
 .projects__item-title {
-  margin-bottom: .9rem !important;
+  margin-bottom: 0.9rem !important;
   margin-top: 1rem;
 }
 .projects__item-ul {
@@ -181,5 +190,100 @@ ab 1024px für mobile navbar hamburger
 .projects__item-button {
   width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+}
+
+/* .......................... */
+/* .......................... */
+.aboutMe__section {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #f1cbcb34;
+}
+.aboutMe__items {
+  /* background-color: #f1cbcb34; */
+  /* filter: brightness(100%); */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem 3rem;
+  padding-top: 8rem;
+  gap: 1.5rem;
+  /* max-width: 80vw; */
+}
+.aboutMe__img {
+  position: absolute;
+  top: -14%;
+  /* left: 25%; */
+}
+.item0 {
+  position: relative;
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  /* column-gap: 1rem; */
+  align-items: center;
+}
+
+.aboutMe__info {
+  padding-top: 2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item1 {
+  background-color: #e4dad57e !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0 0 1px rgba(10, 10, 10, 0.02);
+}
+.aboutMe__ul-sozialMedia {
+  display: flex;
+  align-items: center;
+}
+.aboutMe__ul-li {
+  padding: 10px 10px 0 10px;
+}
+.title1 {
+  margin: 2rem 0;
+}
+.about {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  max-width: 80vw;
+  width: 1029px;
+}
+.item2 {
+  text-align: center;
+  max-height: 400px;
+}
+.subTitle2 {
+  text-align: left;
+  margin-bottom: 0 !important;
+  letter-spacing: 0.7px;
+}
+.aboutMe__biography {
+  height: 100%;
+  display: grid;
+  padding: 0 2rem;
+}
+.aboutMe__button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.aboutMe__button {
+  width: 95%;
+  font-weight: bold;
 }
