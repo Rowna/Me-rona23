@@ -71,9 +71,9 @@ ab 1024px für mobile navbar hamburger
 }
 .landing-page__info {
   position: absolute;
-  display: grid;
-  justify-content: center;
-  align-content: center;
+  /* display: grid; */
+  /* justify-content: center; */
+  /* align-content: center; */
   top: 50%;
   left: 50%;
   margin-left: -250px;
@@ -82,6 +82,13 @@ ab 1024px für mobile navbar hamburger
   /* padding-top: 15%; */
   /* background-color: #92408060; */
 }
+@media screen and (max-width: 1036px) {
+  .landing-page__info {
+    margin-left: -163px;
+    margin-top: -168px;
+  }
+}
+
 .landing-page__para-div {
   max-width: 600px;
   margin-bottom: 1rem;
@@ -90,6 +97,7 @@ ab 1024px für mobile navbar hamburger
   color: #ffffff !important;
   position: relative;
   width: 450px;
+  margin: 2rem 0;
 }
 .landing-page__para2::after {
   position: absolute;
@@ -101,6 +109,7 @@ ab 1024px für mobile navbar hamburger
   background-color: #b5b5b5;
   width: 50vw;
   height: 5px;
+  margin-top: 1rem;
 }
 .landing-page__CTA-btn {
   width: 220px !important;
@@ -113,21 +122,64 @@ ab 1024px für mobile navbar hamburger
 }
 
 /* .......................... */
-.about-me__container {
-  display: flex;
-  flex-direction: column;
+.projects__section {
+  display: grid;
+  justify-content: center;
+  align-content: center;
   background-color: #201f1d;
+  /* margin-left: -250px; */
+  /* margin-top: -250px; */
 }
-.about-me__items {
+.projects__container {
+  display: flex;
+  /* justify-content: center; */
+  /* align-content: center; */
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
+.projects__item-img {
+  z-index: 2;
+}
+.projects__item-info {
+  padding: 1rem 0 0.5rem 0;
+}
+.projects__info {
+  text-align: center;
+  padding: 2rem;
+}
+.projects__items {
   display: flex;
   flex-direction: row;
+  gap: 2rem;
 }
-.about-me__title {
+.projects__title {
   color: #e3e0e0 !important;
 }
-.about-me__subtitle {
+.projects__subtitle {
   color: #cccaca !important;
 }
-.about-me__item {
-  background-color: #E4DAD5 !important;
+.projects__item {
+  background-color: #e4dad5 !important;
+  max-width: 295px;
+  max-height: 515px;
+  height: 515px;
+} /* hier brauche ich @media für mobile-version */
+
+.projects__item-title {
+  margin-bottom: .9rem !important;
+  margin-top: 1rem;
+}
+.projects__item-ul {
+  margin-bottom: 1.5rem;
+  margin-left: 15px;
+}
+.projects__item-li {
+  /* position: relative; */
+  list-style-type: circle !important;
+  list-style-position: inside;
+}
+.projects__item-button {
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
 }
