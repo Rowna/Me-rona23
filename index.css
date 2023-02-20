@@ -114,13 +114,17 @@ ab 1024px für mobile navbar hamburger
   min-width: 200px;
 }
 .landing-page__CTA-btn {
-  width: 220px !important;
+  width: 250px !important;
   height: 65px !important;
-  font-size: 1.3rem !important;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+  font-size: 1.5rem !important;
+  box-shadow: #4f70db 0px 15px 15px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
-  color: transparent;
-  border-color: rgb(218, 167, 167) !important;
+  border: #4f70db solid 3px !important;
+  border-radius: 8px !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
 /* .......................... */
@@ -159,8 +163,15 @@ ab 1024px für mobile navbar hamburger
 .projects__items {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
+/* @media screen and (max-width: 666px) {
+  .projects__items {
+    flex-direction: column;
+  }
+} */
 .projects__title {
   color: #e3e0e0 !important;
 }
@@ -211,15 +222,19 @@ ab 1024px für mobile navbar hamburger
   justify-content: center;
   align-content: center;
   grid-template-columns: 1fr 1fr;
-  padding: 2rem 3rem;
+  /* padding: 2rem 3rem; */
   padding-top: 8rem;
+  padding-bottom: 4rem !important;
   gap: 1.5rem;
   /* max-width: 80vw; */
+  max-width: 900px;
 }
 .aboutMe__img {
   position: absolute;
-  top: -14%;
+  top: -20%;
   /* left: 25%; */
+  border: #4f70db 3px solid;
+  border-radius: 50%;
 }
 .item0 {
   position: relative;
@@ -268,6 +283,9 @@ ab 1024px für mobile navbar hamburger
   text-align: center;
   max-height: 400px;
 }
+.title2 {
+  text-align: left;
+}
 .subTitle2 {
   text-align: left;
   margin-bottom: 0 !important;
@@ -286,4 +304,137 @@ ab 1024px für mobile navbar hamburger
 .aboutMe__button {
   width: 95%;
   font-weight: bold;
+  border: #4f70db solid 2px !important;
+  color: #4c64b3 !important;
+  border-radius: 6px !important;
+  /* background-color: transparent !important; */
+}
+
+.aboutMe__skills-container {
+  /* background-color: #a55050; */
+  /* background-color: #413333; */
+  display: flex;
+  justify-content: center;
+}
+
+.percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  /* transform: rotate(270deg); */
+}
+.aboutMe__svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+.aboutMe__cirlce {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 7;
+  stroke: #4f494941;
+  transform: translate(5px, 5px);
+}
+.aboutMe__cirlce:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440px;
+  /* stroke-dashoffset: 440 * var(--num); */
+  stroke-dashoffset: calc(440px - (440px * var(--num)) / 100);
+  animation-delay: 2.5s;
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.aboutMe__dot {
+  position: absolute;
+  /* background: #f00; */
+  inset: 5px;
+  z-index: 5;
+  /* transform: rotate(calc(3.6deg * var(--num))); */
+  animation: animateDot 2s linear forwards;
+}
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+.aboutMe__dot::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 45%;
+  border-radius: 50%;
+  transform: rotateX(-50% "angle");
+  width: 10px;
+  height: 10px;
+  background: var(--clr);
+  box-shadow: 0 0 15px var(--clr), 0 0 40px var(--clr);
+}
+.aboutMe__number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation-delay: 2.5s;
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+}
+.aboutMe__progress-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.1em;
+}
+.aboutMe__progress-value span {
+  font-weight: 300;
+  color: #fff;
+  font-size: 0.5em;
+}
+.aboutMe__progress-text {
+  font-weight: 300;
+  font-size: 0.75em;
+  line-height: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 2555);
+}
+
+.container {
+  margin-top: 5rem;
+}
+
+.aboutMe2__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  background-color: #f1cbcb34;
+}
+.aboutMe2__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-top: 2.2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 4rem;
+
+  /* max-width: 80vw; */
+  /* max-width: 900px; */
 }
