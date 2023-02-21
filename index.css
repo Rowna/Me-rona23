@@ -155,7 +155,7 @@ ab 1024px für mobile navbar hamburger
   z-index: 2;
 }
 .projects__item-info {
-  padding: 1rem 0 0.5rem 0;
+  padding: 10px 0 10px 0;
 }
 .projects__info {
   text-align: center;
@@ -180,18 +180,18 @@ ab 1024px für mobile navbar hamburger
   color: #cccaca !important;
 }
 .projects__item {
-  background-color: #e4dad5 !important;
+  background-color: #d5d8e1 !important;
   max-width: 295px;
-  max-height: 515px;
-  height: 515px;
+  max-height: 400px;
+  height: 400px;
 } /* hier brauche ich @media für mobile-version */
 
 .projects__item-title {
-  margin-bottom: 0.9rem !important;
-  margin-top: 1rem;
+  margin-bottom: 0.4rem !important;
+  /* margin-top: 5px; */
 }
 .projects__item-ul {
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
   margin-left: 15px;
 }
 .projects__item-li {
@@ -199,10 +199,19 @@ ab 1024px für mobile navbar hamburger
   list-style-type: circle !important;
   list-style-position: inside;
 }
+.projects__item-li:nth-child(2) {
+  color: rgba(90, 81, 81, 0.23) !important;
+}
 .projects__item-button {
   width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+  background: rgba(101, 128, 218, 0.2) !important;
+  border: 1.5px solid #4f70db !important;
+  border-radius: 2px !important;
+}
+.p-10 {
+  padding-top: 10px;
 }
 
 /* .......................... */
