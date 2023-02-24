@@ -399,15 +399,15 @@ ab 1024px für mobile navbar hamburger
 }
 .dot2 {
   /* html-css circle*/
-  animation: animateDot 2.7s linear forwards;
+  animation: animateDot 3.5s linear forwards;
 }
 .dot3 {
   /* html-css circle*/
-  animation: animateDot 3s linear forwards;
+  animation: animateDot 1.5s linear forwards;
 }
 .dot4 {
   /* html-css circle*/
-  /* animation: animateDot 2.7s linear forwards; */
+  animation: animateDot 1s linear forwards;
 }
 
 .aboutMe__dot::before {
@@ -477,4 +477,34 @@ ab 1024px für mobile navbar hamburger
 
   /* max-width: 80vw; */
   /* max-width: 900px; */
+}
+
+.aboutMe3__section {
+  padding-top: 2rem;
+  background-color: #f1cbcb34;
+}
+.aboutMe3__scroll-container {
+  position: relative;
+  /* padding-top: 2rem; */
+  /* padding: 2rem; */
+}
+.aboutMe3__scroll {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 55px;
+  background-color: #e1e117;
+  /* background-color: #F7F6F6; */
+  display: flex;
+  justify-content: center;
+}
+.aboutMe3__img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.aboutMe3__img:hover, .aboutMe3__scroll:hover {
+  cursor: pointer;
+}
+.aboutMe3__items {
+  position: relative;
 }
