@@ -18,11 +18,11 @@ ab 1024px für mobile navbar hamburger
 }
 .under-con > p {
   width: fit-content;
-background-color: #e2e815cc;
-padding: 8px;
-border-radius: 6px;
-font-weight: 600;
-/* color: wheat !important; */
+  background-color: #e2e815cc;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  /* color: wheat !important; */
 }
 .nav__container {
   align-items: center !important;
@@ -109,6 +109,27 @@ font-weight: 600;
   position: relative;
   width: 450px;
   margin: 2rem 0;
+}
+@media screen and (max-width: 550px) {
+  .landing-page__m-20 , .landing-page__subPara{
+    /* margin-left: -163px; */
+    display: none !important;
+    /* margin-top: -168px; */
+  }
+  .landing-page__info {
+    margin-left: -123px;
+    margin-top: -104px;
+  }
+  .landing-page__para {
+    font-size: 1rem !important;
+  }
+  .aboutMe__items, .aboutMe2__items {
+    display: flex !important;
+    flex-direction: column ;
+  }
+  .subTitle2 { 
+    margin-bottom: 1rem !important;
+  }
 }
 .landing-page__para2::after {
   position: absolute;
@@ -325,7 +346,7 @@ font-weight: 600;
   align-items: flex-end;
 }
 .aboutMe__button {
-  width: 95%;
+  width: 100%;
   font-weight: bold;
   border: #4f70db solid 2px !important;
   color: #4c64b3 !important;
@@ -544,7 +565,6 @@ font-weight: 600;
   align-items: center;
   justify-content: center;
   margin-bottom: 4rem;
-  
 }
 .aboutMe3__item1 {
   grid-column: 2 / 3;
