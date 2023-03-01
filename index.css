@@ -167,6 +167,7 @@ ab 1024px für mobile navbar hamburger
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  width: 100vw;
 }
 /* @media screen and (max-width: 666px) {
   .projects__items {
@@ -184,6 +185,8 @@ ab 1024px für mobile navbar hamburger
   max-width: 295px;
   max-height: 400px;
   height: 400px;
+  /* width: 250px; */
+  /* height: 350px; */
 } /* hier brauche ich @media für mobile-version */
 
 .projects__item-title {
@@ -211,7 +214,7 @@ ab 1024px für mobile navbar hamburger
   border-radius: 2px !important;
 }
 .p-10 {
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 
 /* .......................... */
@@ -324,7 +327,7 @@ ab 1024px für mobile navbar hamburger
   padding: 10px;
   padding-bottom: 1.5rem;
 }
-.aboutMe__skills-container {
+.aboutMe__skills-item {
   /* background-color: #a55050; */
   /* background-color: #413333; */
   display: flex;
@@ -363,8 +366,11 @@ ab 1024px für mobile navbar hamburger
   /* --num = 75 */
   stroke-dashoffset: calc(440px - (440px * var(--num)) / 100);
   animation-delay: 2.5s;
+  /* opacity: 1; */
   opacity: 0;
   animation: fadeIn 1s linear forwards;
+  /* animation: anim 3s linear forwards; */
+  /* fill: none; */
 }
 @keyframes fadeIn {
   0% {
@@ -374,6 +380,17 @@ ab 1024px für mobile navbar hamburger
     opacity: 1;
   }
 }
+
+/*
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    stroke-dashoffset: calc(440px - (440px * var(--num)) / 100);
+  }
+}
+*/
 .aboutMe__dot {
   position: absolute;
   /* background: #f00; */
@@ -469,7 +486,8 @@ ab 1024px für mobile navbar hamburger
 .aboutMe2__items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2rem;
+  /* gab muss noch @media */
+  gap: 6rem;
   padding-top: 2.2rem;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -482,6 +500,7 @@ ab 1024px für mobile navbar hamburger
 .aboutMe3__section {
   padding-top: 2rem;
   background-color: #f1cbcb34;
+  position: relative;
 }
 .aboutMe3__scroll-container {
   position: relative;
@@ -502,9 +521,34 @@ ab 1024px für mobile navbar hamburger
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.aboutMe3__img:hover, .aboutMe3__scroll:hover {
+.aboutMe3__img:hover,
+.aboutMe3__scroll:hover {
   cursor: pointer;
 }
 .aboutMe3__items {
-  position: relative;
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: 4rem 1fr 1fr 4rem;
+  grid-template-rows: 1fr 1fr;
+  /* justify-items: center; */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+  
+}
+.aboutMe3__item1 {
+  grid-column: 2 / 3;
+  text-align: center;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.aboutMe3__item2 {
+  grid-column: 3 / 4;
+  text-align: center;
+
+  /* border-right: 2px solid black; */
+  border-bottom: 1px solid black;
+}
+.aboutMe3__item-last {
+  border-bottom: none;
 }
