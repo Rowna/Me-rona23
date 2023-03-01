@@ -16,6 +16,7 @@ ab 1024px für mobile navbar hamburger
 
 .nav__container {
   align-items: center !important;
+  border-top: 3px solid #4f70db;
 }
 .nav-menu__ls {
   width: 100%;
@@ -77,7 +78,7 @@ ab 1024px für mobile navbar hamburger
   top: 50%;
   left: 50%;
   margin-left: -250px;
-  margin-top: -250px;
+  margin-top: -200px;
   /* padding: 2rem; */
   /* padding-top: 15%; */
   /* background-color: #92408060; */
@@ -110,17 +111,24 @@ ab 1024px für mobile navbar hamburger
   width: 50vw;
   height: 5px;
   margin-top: 1rem;
+  max-width: 450px;
+  min-width: 200px;
 }
 .landing-page__CTA-btn {
-  width: 220px !important;
+  width: 250px !important;
   height: 65px !important;
-  font-size: 1.3rem !important;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+  font-size: 1.5rem !important;
+  box-shadow: #4f70db 0px 15px 15px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
-  color: transparent;
-  border-color: rgb(218, 167, 167) !important;
+  border: #4f70db solid 3px !important;
+  border-radius: 8px !important;
+  background-color: transparent !important;
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
+/* .......................... */
 /* .......................... */
 .projects__section {
   display: grid;
@@ -135,13 +143,19 @@ ab 1024px für mobile navbar hamburger
   /* justify-content: center; */
   /* align-content: center; */
   flex-direction: column;
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 4rem 3rem;
+  /* padding-bottom: 2rem; */
+}
+.about {
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
 .projects__item-img {
   z-index: 2;
 }
 .projects__item-info {
-  padding: 1rem 0 0.5rem 0;
+  padding: 10px 0 10px 0;
 }
 .projects__info {
   text-align: center;
@@ -150,8 +164,16 @@ ab 1024px für mobile navbar hamburger
 .projects__items {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
+  width: 100vw;
 }
+/* @media screen and (max-width: 666px) {
+  .projects__items {
+    flex-direction: column;
+  }
+} */
 .projects__title {
   color: #e3e0e0 !important;
 }
@@ -159,18 +181,20 @@ ab 1024px für mobile navbar hamburger
   color: #cccaca !important;
 }
 .projects__item {
-  background-color: #e4dad5 !important;
+  background-color: #d5d8e1 !important;
   max-width: 295px;
-  max-height: 515px;
-  height: 515px;
+  max-height: 400px;
+  height: 400px;
+  /* width: 250px; */
+  /* height: 350px; */
 } /* hier brauche ich @media für mobile-version */
 
 .projects__item-title {
-  margin-bottom: .9rem !important;
-  margin-top: 1rem;
+  margin-bottom: 0.4rem !important;
+  /* margin-top: 5px; */
 }
 .projects__item-ul {
-  margin-bottom: 1.5rem;
+  margin-bottom: 10px;
   margin-left: 15px;
 }
 .projects__item-li {
@@ -178,8 +202,353 @@ ab 1024px für mobile navbar hamburger
   list-style-type: circle !important;
   list-style-position: inside;
 }
+.projects__item-li:nth-child(2) {
+  color: rgba(90, 81, 81, 0.23) !important;
+}
 .projects__item-button {
   width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important;
+  background: rgba(101, 128, 218, 0.2) !important;
+  border: 1.5px solid #4f70db !important;
+  border-radius: 2px !important;
+}
+.p-10 {
+  /* padding-top: 10px; */
+}
+
+/* .......................... */
+/* .......................... */
+.aboutMe__section {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #f1cbcb34;
+}
+.aboutMe__items {
+  /* background-color: #f1cbcb34; */
+  /* filter: brightness(100%); */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  /* padding: 2rem 3rem; */
+  padding-top: 8rem;
+  padding-bottom: 4rem !important;
+  gap: 1.5rem;
+  /* max-width: 80vw; */
+  max-width: 900px;
+}
+.aboutMe__img {
+  position: absolute;
+  top: -20%;
+  /* left: 25%; */
+  border: #4f70db 3px solid;
+  border-radius: 50%;
+}
+.item0 {
+  position: relative;
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  /* column-gap: 1rem; */
+  align-items: center;
+}
+
+.aboutMe__info {
+  padding-top: 2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item1 {
+  background-color: #e4dad57e !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0 0 1px rgba(10, 10, 10, 0.02);
+}
+.aboutMe__ul-sozialMedia {
+  display: flex;
+  align-items: center;
+}
+.aboutMe__ul-li {
+  padding: 10px 10px 0 10px;
+}
+.title1 {
+  margin: 2rem 0;
+}
+.about {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  max-width: 80vw;
+  width: 1029px;
+}
+.item2 {
+  text-align: center;
+  max-height: 400px;
+}
+.title2 {
+  text-align: left;
+}
+.subTitle2 {
+  text-align: left;
+  margin-bottom: 0 !important;
+  letter-spacing: 0.7px;
+}
+.aboutMe__biography {
+  height: 100%;
+  display: grid;
+  padding: 0 2rem;
+}
+.aboutMe__button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.aboutMe__button {
+  width: 95%;
+  font-weight: bold;
+  border: #4f70db solid 2px !important;
+  color: #4c64b3 !important;
+  border-radius: 6px !important;
+  /* background-color: transparent !important; */
+}
+
+.title3 {
+  padding: 10px;
+  padding-bottom: 1.5rem;
+}
+.aboutMe__skills-item {
+  /* background-color: #a55050; */
+  /* background-color: #413333; */
+  display: flex;
+  justify-content: center;
+}
+
+.percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  /* transform: rotate(270deg); */
+}
+.aboutMe__svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  /* -drehen Richtung Uhrzeigersinn */
+  transform: rotate(270deg);
+}
+/* First circle */
+.aboutMe__cirlce {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 8;
+  stroke: #4f494941;
+  /* verschieben in die (x,y)  */
+  transform: translate(5px, 5px);
+}
+/* zweite Sibling bzw Kreis */
+.aboutMe__cirlce:nth-child(2) {
+  /* color aus html-var */
+  stroke: var(--clr);
+  /* Farbe geht entlang der path */
+  stroke-dasharray: 440px;
+  /* --num = 75 */
+  stroke-dashoffset: calc(440px - (440px * var(--num)) / 100);
+  animation-delay: 2.5s;
+  /* opacity: 1; */
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  /* animation: anim 3s linear forwards; */
+  /* fill: none; */
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+@keyframes anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    stroke-dashoffset: calc(440px - (440px * var(--num)) / 100);
+  }
+}
+*/
+.aboutMe__dot {
+  position: absolute;
+  /* background: #f00; */
+  inset: 5px;
+  z-index: 5;
+  /* transform: rotate(calc(3.6deg * var(--num))); */
+  /* animation fürs Dot-Drehen mit 2-Sekunen*/
+  /* animation: animateDot 2s linear forwards; */
+}
+
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+
+.dot1 {
+  /* webdesign circle*/
+  animation: animateDot 2.5s linear forwards;
+}
+.dot2 {
+  /* html-css circle*/
+  animation: animateDot 3.5s linear forwards;
+}
+.dot3 {
+  /* html-css circle*/
+  animation: animateDot 1.5s linear forwards;
+}
+.dot4 {
+  /* html-css circle*/
+  animation: animateDot 1s linear forwards;
+}
+
+.aboutMe__dot::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 45%;
+  border-radius: 50%;
+  transform: rotateX(-50% "angle");
+  width: 10px;
+  height: 10px;
+  background: var(--clr);
+  box-shadow: 0 0 15px var(--clr), 0 0 40px var(--clr);
+}
+.aboutMe__number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation-delay: 2.5s;
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+}
+.aboutMe__progress-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.1em;
+}
+.aboutMe__progress-value span {
+  font-weight: 300;
+  color: #fff;
+  font-size: 0.5em;
+}
+.aboutMe__progress-text {
+  font-weight: 300;
+  font-size: 0.75em;
+  line-height: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 2555);
+}
+
+.container {
+  margin-top: 5rem;
+}
+
+.aboutMe2__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  background-color: #f1cbcb34;
+}
+.aboutMe2__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* gab muss noch @media */
+  gap: 6rem;
+  padding-top: 2.2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 4rem;
+
+  /* max-width: 80vw; */
+  /* max-width: 900px; */
+}
+
+.aboutMe3__section {
+  padding-top: 2rem;
+  background-color: #f1cbcb34;
+  position: relative;
+}
+.aboutMe3__scroll-container {
+  position: relative;
+  /* padding-top: 2rem; */
+  /* padding: 2rem; */
+}
+.aboutMe3__scroll {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 55px;
+  background-color: #e1e117;
+  /* background-color: #F7F6F6; */
+  display: flex;
+  justify-content: center;
+}
+.aboutMe3__img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.aboutMe3__img:hover,
+.aboutMe3__scroll:hover {
+  cursor: pointer;
+}
+.aboutMe3__items {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: 4rem 1fr 1fr 4rem;
+  grid-template-rows: 1fr 1fr;
+  /* justify-items: center; */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+  
+}
+.aboutMe3__item1 {
+  grid-column: 2 / 3;
+  text-align: center;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.aboutMe3__item2 {
+  grid-column: 3 / 4;
+  text-align: center;
+
+  /* border-right: 2px solid black; */
+  border-bottom: 1px solid black;
+}
+.aboutMe3__item-last {
+  border-bottom: none;
 }
