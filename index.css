@@ -13,7 +13,17 @@
 ab 1024px für mobile navbar hamburger
 @media screen and (min-width: 1024px) { }
 */
-
+.under-con {
+  width: 100%;
+}
+.under-con > p {
+  width: fit-content;
+background-color: #e2e815cc;
+padding: 8px;
+border-radius: 6px;
+font-weight: 600;
+/* color: wheat !important; */
+}
 .nav__container {
   align-items: center !important;
   border-top: 3px solid #4f70db;
