@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", function (event) {
+  
+  let hBurger = document.getElementById("burger");
+  let navbar = document.getElementById("main-nav");
+
+  hBurger.addEventListener("click", function (e) {
+    this.classList.toggle("is-open");
+    navbar.classList.toggle("is-open");
+  });
+
+
+
+
 
   let aboutMeScroll = document.querySelector(".aboutMe3__scroll");
-  document.addEventListener("", ()=> {
-
-  })
+  document.addEventListener("", () => {});
 
   let dot1 = document.querySelector(".dot1");
   // let dot2 = document.querySelector(".dot2");

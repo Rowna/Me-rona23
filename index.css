@@ -24,9 +24,49 @@ ab 1024px für mobile navbar hamburger
   font-weight: 600;
   /* color: wheat !important; */
 }
+
+@media screen and (min-width: 1024px) { 
+.hamburgermenu_container {
+  display: none !important;
+}
+}
+/* min ab, max unter */
+@media screen and (max-width: 1025px) { 
+  .hamburgermenu_container {
+    display: flex;
+  }
+}
+.nav__container {
+  display: flex;
+}
+.main-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: #FFF;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: all .375s;
+}
+.main-nav.is-open {
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+}
+
+
+
+
+
+
 .nav__container {
   align-items: center !important;
   border-top: 3px solid #4f70db;
+  padding: 0 2rem;
 }
 .nav-menu__ls {
   width: 100%;
@@ -85,6 +125,8 @@ ab 1024px für mobile navbar hamburger
   /* display: grid; */
   /* justify-content: center; */
   /* align-content: center; */
+  width: 450px;
+  max-width: 500px;
   top: 50%;
   left: 50%;
   margin-left: -250px;
@@ -107,11 +149,12 @@ ab 1024px für mobile navbar hamburger
 .landing-page__para {
   color: #ffffff !important;
   position: relative;
-  width: 450px;
+  width: 400px;
   margin: 2rem 0;
 }
-@media screen and (max-width: 550px) {
-  .landing-page__m-20 , .landing-page__subPara{
+@media screen and (max-width: 850px) {
+  .landing-page__m-20,
+  .landing-page__subPara {
     /* margin-left: -163px; */
     display: none !important;
     /* margin-top: -168px; */
@@ -123,11 +166,12 @@ ab 1024px für mobile navbar hamburger
   .landing-page__para {
     font-size: 1rem !important;
   }
-  .aboutMe__items, .aboutMe2__items {
+  .aboutMe__items,
+  .aboutMe2__items {
     display: flex !important;
-    flex-direction: column ;
+    flex-direction: column;
   }
-  .subTitle2 { 
+  .subTitle2 {
     margin-bottom: 1rem !important;
   }
 }
@@ -142,7 +186,7 @@ ab 1024px für mobile navbar hamburger
   width: 50vw;
   height: 5px;
   margin-top: 1rem;
-  max-width: 450px;
+  max-width: 400px;
   min-width: 200px;
 }
 .landing-page__CTA-btn {
@@ -183,6 +227,8 @@ ab 1024px für mobile navbar hamburger
   align-content: center;
 }
 .projects__item-img {
+  width: 255px;
+  height: 212px;
   z-index: 2;
 }
 .projects__item-info {
